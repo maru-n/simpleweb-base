@@ -7,9 +7,15 @@ simple baseline for prototyping at web frontend.
 based on https://webpack.js.org/guides/
 
 
-## start
+## development start
 
 ```
 $ npm install
 $ npm start
+```
+
+## build
+
+```
+$ npm run build
 ```
