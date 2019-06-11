@@ -7,9 +7,22 @@ module.exports = {
     contentBase: './dist',
     host: '0.0.0.0'
   },
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: `${__dirname}/dist`
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   }
 };
